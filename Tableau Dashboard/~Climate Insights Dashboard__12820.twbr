@@ -1,0 +1,2230 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0208.0338                               -->
+<workbook original-version='18.1' source-build='2024.3.4 (20243.25.0208.0338)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='ClimateInsightsDashboard' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+        <calculation class='tableau' formula='&quot;Temperature&quot;' />
+        <members>
+          <member value='&quot;Temperature&quot;' />
+          <member value='&quot;Humidity&quot;' />
+          <member value='&quot;Rainfall&quot;' />
+          <member value='&quot;CO2_Level&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' inline='true' name='federated.16dryja0hryadq10ub7s21kd2ase' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='karachi_weather_10000_days_cleaned' name='excel-direct.07uzd471f1z2m018ciakc0nj34n3'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Haroon Ahmed/Downloads/karachi_weather_10000_days_cleaned.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.07uzd471f1z2m018ciakc0nj34n3' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:H10001:no:A1:H10001:0' header='yes' outcome='6'>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='real' name='Temperature' ordinal='1' />
+            <column datatype='real' name='Humidity' ordinal='2' />
+            <column datatype='real' name='Wind_Speed' ordinal='3' />
+            <column datatype='real' name='Rainfall' ordinal='4' />
+            <column datatype='real' name='Pressure' ordinal='5' />
+            <column datatype='string' name='Location' ordinal='6' />
+            <column datatype='real' name='CO2_Level' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H10001:no:A1:H10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Temperature]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Temperature</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Humidity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Humidity]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Humidity</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind_Speed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Wind_Speed]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Wind_Speed</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rainfall</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rainfall]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Rainfall</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pressure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pressure]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Pressure</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RPK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CO2_Level</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CO2_Level]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>CO2_Level</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+      <column caption='Heavy rainfall' datatype='string' name='[Calculation_1168402633111228416]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Rainfall] &gt; 50 THEN &quot;Yes&quot; ELSE &quot;No&quot; END' />
+      </column>
+      <column caption='Extreme Temp Type' datatype='string' name='[Calculation_1168402633127546881]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Temperature] &lt; 15 THEN &quot;Cold&quot;&#13;&#10;ELSEIF [Temperature] &gt; 40 THEN &quot;Heatwave&quot;&#13;&#10;ELSE &quot;Normal&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Selected Measure' datatype='real' name='[Calculation_1209497979540373510]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Temperature&quot; THEN [Temperature]&#13;&#10;WHEN &quot;Humidity&quot; THEN [Humidity]&#13;&#10;WHEN &quot;Rainfall&quot; THEN [Rainfall]&#13;&#10;WHEN &quot;CO2_Level&quot; THEN [CO2_Level]&#13;&#10;END' />
+      </column>
+      <column caption='Anomaly ' datatype='string' name='[Calculation_1209497979541098503]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF ABS(AVG([Calculation_1209497979540373510]) - WINDOW_AVG(AVG([Calculation_1209497979540373510]))) &gt; 2 THEN &quot;Anomaly&quot; ELSE &quot;Normal&quot; END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Climate Conditions' datatype='string' name='[Calculation_1209497979541524488]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Temperature&quot; THEN&#13;&#10;    IF [Temperature] &lt; 15 THEN &quot;Cold&quot;&#13;&#10;    ELSEIF [Temperature] &gt; 40 THEN &quot;Heatwave&quot;&#13;&#10;    ELSE &quot;Normal&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;Humidity&quot; THEN&#13;&#10;    IF [Humidity] &lt; 20 THEN &quot;Very Dry&quot;&#13;&#10;    ELSEIF [Humidity] &gt; 80 THEN &quot;Very Humid&quot;&#13;&#10;    ELSE &quot;Normal&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;Rainfall&quot; THEN&#13;&#10;    IF [Rainfall] = 0 THEN &quot;No Rain&quot;&#13;&#10;    ELSEIF [Rainfall] &gt; 50 THEN &quot;Heavy Rain&quot;&#13;&#10;    ELSE &quot;Moderate Rain&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;CO2_Level&quot; THEN&#13;&#10;    IF [CO2_Level] &gt; 440 THEN &quot;High CO₂&quot;&#13;&#10;    ELSE &quot;Acceptable&quot;&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    &quot;Normal&quot;&#13;&#10;END' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Humidity (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Humidity]' peg='0' size='2.55' />
+      </column>
+      <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+      <column caption='Wind Speed' datatype='real' name='[Wind_Speed]' role='measure' type='quantitative' />
+      <column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1168402633111228416]' derivation='None' name='[none:Calculation_1168402633111228416:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1209497979541524488]' derivation='None' name='[none:Calculation_1209497979541524488:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1hhx1m314fa6mn13xbtdf1nad6h6.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/29/2025 06:56:09 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>10000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Temperature</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Temperature]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Temperature</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>445</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Humidity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Humidity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Humidity</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1322</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wind_Speed</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Wind_Speed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Wind_Speed</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>530</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rainfall</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Rainfall]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rainfall</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1382</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pressure</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pressure]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pressure</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>699</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CO2_Level</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[CO2_Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CO2_Level</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1251</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_1209497979541524488:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Acceptable&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cold&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Heatwave&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Very Humid&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;No Rain&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Heavy Rain&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Very Dry&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Normal&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;High CO₂&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Moderate Rain&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Forecast Indicator:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Actual&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Estimate&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1168402633111228416:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Pakistan&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Date' />
+        <field-sort-custom-order field='Temperature' />
+        <field-sort-custom-order field='Calculation_1209497979528003589' />
+        <field-sort-custom-order field='Humidity' />
+        <field-sort-custom-order field='Wind_Speed' />
+        <field-sort-custom-order field='Rainfall' />
+        <field-sort-custom-order field='Pressure' />
+        <field-sort-custom-order field='Location' />
+        <field-sort-custom-order field='CO2_Level' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+          <calculation class='tableau' formula='&quot;Temperature&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_CCF187F95C4A48858D3764ACD2E6A86E'>
+            <properties context=''>
+              <relation connection='excel-direct.07uzd471f1z2m018ciakc0nj34n3' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:H10001:no:A1:H10001:0' header='yes' outcome='6'>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='real' name='Temperature' ordinal='1' />
+                  <column datatype='real' name='Humidity' ordinal='2' />
+                  <column datatype='real' name='Wind_Speed' ordinal='3' />
+                  <column datatype='real' name='Rainfall' ordinal='4' />
+                  <column datatype='real' name='Pressure' ordinal='5' />
+                  <column datatype='string' name='Location' ordinal='6' />
+                  <column datatype='real' name='CO2_Level' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.16dryja0hryadq10ub7s21kd2ase'>
+      <datasources>
+        <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+      </datasources>
+      <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]'>
+        <groupfilter function='level-members' level='[my:Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='quantitative' column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' included-values='in-range'>
+        <min>#1997-12-13#</min>
+        <max>#2025-04-29#</max>
+        <target field='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Temperature Over Time</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[Temperature]' derivation='Avg' name='[avg:Temperature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Temperature:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{3CE2B1B6-D9FB-4E91-BC3F-0C8089621A6E}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Extreme Temperature Days</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='Extreme Temp Type' datatype='string' name='[Calculation_1168402633127546881]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Temperature] &lt; 15 THEN &quot;Cold&quot;&#13;&#10;ELSEIF [Temperature] &gt; 40 THEN &quot;Heatwave&quot;&#13;&#10;ELSE &quot;Normal&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[Temperature]' derivation='Avg' name='[avg:Temperature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1168402633127546881]' derivation='None' name='[none:Calculation_1168402633127546881:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633127546881:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_1168402633127546881:nk]' member='&quot;Cold&quot;' />
+              <groupfilter function='member' level='[none:Calculation_1168402633127546881:nk]' member='&quot;Heatwave&quot;' />
+              <groupfilter function='member' level='[none:Calculation_1168402633127546881:nk]' member='&quot;Normal&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633127546881:nk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633127546881:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Temperature:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{27669C88-31A4-490E-A8DC-EA8F233353B1}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Yearly Climate Average</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[CO2_Level]' derivation='Avg' name='[avg:CO2_Level:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Humidity]' derivation='Avg' name='[avg:Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rainfall]' derivation='Avg' name='[avg:Rainfall:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Temperature]' derivation='Avg' name='[avg:Temperature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CO2_Level]' derivation='Avg' forecast-column-base='[avg:CO2_Level:qk]' forecast-column-type='forecast-value' name='[fVal:avg:CO2_Level:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Humidity]' derivation='Avg' forecast-column-base='[avg:Humidity:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rainfall]' derivation='Avg' forecast-column-base='[avg:Rainfall:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Rainfall:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Temperature]' derivation='Avg' forecast-column-base='[avg:Temperature:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Temperature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.16dryja0hryadq10ub7s21kd2ase].[fVal:avg:Humidity:qk]' />
+              <text column='[federated.16dryja0hryadq10ub7s21kd2ase].[fVal:avg:Rainfall:qk]' />
+              <text column='[federated.16dryja0hryadq10ub7s21kd2ase].[fVal:avg:CO2_Level:qk]' />
+              <text column='[federated.16dryja0hryadq10ub7s21kd2ase].[fVal:avg:Temperature:qk]' />
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{AD09A11A-C355-4260-B045-50680B1038F6}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Condition Frequency by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+              <calculation class='tableau' formula='&quot;Temperature&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+            <column caption='Climate Conditions' datatype='string' name='[Calculation_1209497979541524488]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Temperature&quot; THEN&#13;&#10;    IF [Temperature] &lt; 15 THEN &quot;Cold&quot;&#13;&#10;    ELSEIF [Temperature] &gt; 40 THEN &quot;Heatwave&quot;&#13;&#10;    ELSE &quot;Normal&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;Humidity&quot; THEN&#13;&#10;    IF [Humidity] &lt; 20 THEN &quot;Very Dry&quot;&#13;&#10;    ELSEIF [Humidity] &gt; 80 THEN &quot;Very Humid&quot;&#13;&#10;    ELSE &quot;Normal&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;Rainfall&quot; THEN&#13;&#10;    IF [Rainfall] = 0 THEN &quot;No Rain&quot;&#13;&#10;    ELSEIF [Rainfall] &gt; 50 THEN &quot;Heavy Rain&quot;&#13;&#10;    ELSE &quot;Moderate Rain&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;CO2_Level&quot; THEN&#13;&#10;    IF [CO2_Level] &gt; 440 THEN &quot;High CO₂&quot;&#13;&#10;    ELSE &quot;Acceptable&quot;&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    &quot;Normal&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Sheet1_CCF187F95C4A48858D3764ACD2E6A86E]' derivation='Count' forecast-column-base='[__tableau_internal_object_id__].[cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' forecast-column-type='forecast-value' name='[__tableau_internal_object_id__].[fVal:cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1209497979541524488]' derivation='None' name='[none:Calculation_1209497979541524488:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <size column='[federated.16dryja0hryadq10ub7s21kd2ase].[__tableau_internal_object_id__].[fVal:cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' />
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7999999523162842' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1209497979541524488:nk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{EE013A04-E78E-4738-957B-30DA8BACFB70}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Rainfall Intensity by Month and Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column-instance column='[Rainfall]' derivation='Avg' name='[avg:Rainfall:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Rainfall:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[mn:Date:ok]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{24269636-BDD7-4357-9306-68949CECF466}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Climate Variable Trend</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+              <calculation class='tableau' formula='&quot;Temperature&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+            <column caption='Selected Measure' datatype='real' name='[Calculation_1209497979540373510]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Temperature&quot; THEN [Temperature]&#13;&#10;WHEN &quot;Humidity&quot; THEN [Humidity]&#13;&#10;WHEN &quot;Rainfall&quot; THEN [Rainfall]&#13;&#10;WHEN &quot;CO2_Level&quot; THEN [CO2_Level]&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1209497979540373510]' derivation='Avg' name='[avg:Calculation_1209497979540373510:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Calculation_1209497979540373510:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{F9963164-BEAB-4FFF-9311-C95B6F4F2609}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Anomaly Detection</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+              <calculation class='tableau' formula='&quot;Temperature&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+            <column caption='Selected Measure' datatype='real' name='[Calculation_1209497979540373510]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Temperature&quot; THEN [Temperature]&#13;&#10;WHEN &quot;Humidity&quot; THEN [Humidity]&#13;&#10;WHEN &quot;Rainfall&quot; THEN [Rainfall]&#13;&#10;WHEN &quot;CO2_Level&quot; THEN [CO2_Level]&#13;&#10;END' />
+            </column>
+            <column caption='Anomaly ' datatype='string' name='[Calculation_1209497979541098503]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF ABS(AVG([Calculation_1209497979540373510]) - WINDOW_AVG(AVG([Calculation_1209497979540373510]))) &gt; 2 THEN &quot;Anomaly&quot; ELSE &quot;Normal&quot; END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1209497979540373510]' derivation='Avg' name='[avg:Calculation_1209497979540373510:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1209497979541098503]' derivation='User' name='[usr:Calculation_1209497979541098503:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[usr:Calculation_1209497979541098503:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Calculation_1209497979540373510:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{5325A2E8-682B-40F1-B988-8277563D2191}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Climate Condition Classifier</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+              <calculation class='tableau' formula='&quot;Temperature&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+            <column caption='Selected Measure' datatype='real' name='[Calculation_1209497979540373510]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Temperature&quot; THEN [Temperature]&#13;&#10;WHEN &quot;Humidity&quot; THEN [Humidity]&#13;&#10;WHEN &quot;Rainfall&quot; THEN [Rainfall]&#13;&#10;WHEN &quot;CO2_Level&quot; THEN [CO2_Level]&#13;&#10;END' />
+            </column>
+            <column caption='Climate Conditions' datatype='string' name='[Calculation_1209497979541524488]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Temperature&quot; THEN&#13;&#10;    IF [Temperature] &lt; 15 THEN &quot;Cold&quot;&#13;&#10;    ELSEIF [Temperature] &gt; 40 THEN &quot;Heatwave&quot;&#13;&#10;    ELSE &quot;Normal&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;Humidity&quot; THEN&#13;&#10;    IF [Humidity] &lt; 20 THEN &quot;Very Dry&quot;&#13;&#10;    ELSEIF [Humidity] &gt; 80 THEN &quot;Very Humid&quot;&#13;&#10;    ELSE &quot;Normal&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;Rainfall&quot; THEN&#13;&#10;    IF [Rainfall] = 0 THEN &quot;No Rain&quot;&#13;&#10;    ELSEIF [Rainfall] &gt; 50 THEN &quot;Heavy Rain&quot;&#13;&#10;    ELSE &quot;Moderate Rain&quot;&#13;&#10;    END&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &quot;CO2_Level&quot; THEN&#13;&#10;    IF [CO2_Level] &gt; 440 THEN &quot;High CO₂&quot;&#13;&#10;    ELSE &quot;Acceptable&quot;&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    &quot;Normal&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1209497979540373510]' derivation='Avg' name='[avg:Calculation_1209497979540373510:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1209497979540373510]' derivation='Avg' forecast-column-base='[avg:Calculation_1209497979540373510:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Calculation_1209497979540373510:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1209497979541524488]' derivation='None' name='[none:Calculation_1209497979541524488:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1209497979541524488:nk]' />
+              <text column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1209497979541524488:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[fVal:avg:Calculation_1209497979540373510:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:ok]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{A8BB1D91-7FCA-4827-9FEF-7AA45D5C70C3}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Average Temperature by Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Temperature]' role='measure' type='quantitative' />
+            <column-instance column='[Temperature]' derivation='Avg' name='[avg:Temperature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Temperature:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[mn:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{D6056B5F-B349-428C-A9AD-216F5C75209D}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>CO₂ Level and Environmental Threshold</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='CO2 Level' datatype='real' name='[CO2_Level]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[CO2_Level]' derivation='Avg' name='[avg:CO2_Level:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CO2_Level]' derivation='Avg' forecast-column-base='[avg:CO2_Level:qk]' forecast-column-type='forecast-value' name='[fVal:avg:CO2_Level:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#00000000' />
+            <format attr='line-visibility' id='refline2' value='on' />
+            <format attr='line-pattern-only' id='refline2' value='dotted' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:qk]' enable-instant-analytics='true' formula='min' id='refline0' label-type='automatic' scope='per-pane' value-column='[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:qk]' z-order='1' />
+            <reference-line axis-column='[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:qk]' enable-instant-analytics='true' formula='min' id='refline3' label-type='automatic' scope='per-pane' value-column='[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:qk]' z-order='2' />
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[fVal:avg:CO2_Level:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[yr:Date:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{534AFB06-179C-44AA-AB60-DD77BB30BB88}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Heavy Rainfall Days</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column caption='Heavy rainfall' datatype='string' name='[Calculation_1168402633111228416]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Rainfall] &gt; 50 THEN &quot;Yes&quot; ELSE &quot;No&quot; END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Rainfall]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1168402633111228416]' derivation='None' name='[none:Calculation_1168402633111228416:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rainfall]' derivation='Sum' name='[sum:Rainfall:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_1168402633111228416:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[sum:Rainfall:qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{3F0FA77A-2705-4E8D-A9B5-649E9CDC08CA}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Humidity Distribution</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column aggregation='None' datatype='integer' name='[Humidity (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[Humidity]' peg='0' size='2.55' />
+            </column>
+            <column datatype='real' name='[Humidity]' role='measure' type='quantitative' />
+            <column-instance column='[Humidity]' derivation='Count' name='[cnt:Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='MDY' name='[md:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Humidity (bin)]' derivation='None' name='[none:Humidity (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]</column>
+            <column>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <lod column='[federated.16dryja0hryadq10ub7s21kd2ase].[md:Date:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.16dryja0hryadq10ub7s21kd2ase].[none:Humidity (bin):qk]</rows>
+        <cols>[federated.16dryja0hryadq10ub7s21kd2ase].[cnt:Humidity:qk]</cols>
+        <show-full-range>
+          <column>[federated.16dryja0hryadq10ub7s21kd2ase].[Humidity (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{B78EA171-BFAD-434E-8874-4F33274A8901}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+          <calculation class='tableau' formula='&quot;Temperature&quot;' />
+          <members>
+            <member value='&quot;Temperature&quot;' />
+            <member value='&quot;Humidity&quot;' />
+            <member value='&quot;Rainfall&quot;' />
+            <member value='&quot;CO2_Level&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='51111' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='51111' id='5' type-v2='layout-basic' w='89000' x='500' y='889'>
+              <zone h='51111' id='3' name='Sheet 1' w='44500' x='500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='51111' id='10' name='Sheet 2' w='44500' x='45000' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='51111' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='10000' x='89500' y='889'>
+              <zone h='8111' id='9' name='Sheet 1' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8111' id='11' name='Sheet 2' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Rainfall:qk]' type-v2='color' w='10000' x='89500' y='9000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6222' id='13' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89500' y='17111'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5667' id='15' name='Sheet 4' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[usr:Calculation_1209497979541098503:nk]' type-v2='color' w='10000' x='89500' y='23333'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='47111' id='12' name='Sheet 3' w='49501' x='49999' y='52000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='47111' id='14' name='Sheet 4' w='49499' x='500' y='52000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='27' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='26' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone h='8111' id='9' name='Sheet 1' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51111' id='3' is-fixed='true' name='Sheet 1' w='44500' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51111' id='10' is-fixed='true' name='Sheet 2' w='44500' x='45000' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8111' id='11' name='Sheet 2' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Rainfall:qk]' type-v2='color' w='10000' x='89500' y='9000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6222' id='13' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89500' y='17111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='47111' id='14' is-fixed='true' name='Sheet 4' w='49499' x='500' y='52000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5667' id='15' name='Sheet 4' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[usr:Calculation_1209497979541098503:nk]' type-v2='color' w='10000' x='89500' y='23333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='47111' id='12' is-fixed='true' name='Sheet 3' w='49501' x='49999' y='52000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{149F8AD1-A546-4608-9E0C-5D43EF82D7AB}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+          <calculation class='tableau' formula='&quot;Temperature&quot;' />
+          <members>
+            <member value='&quot;Temperature&quot;' />
+            <member value='&quot;Humidity&quot;' />
+            <member value='&quot;Rainfall&quot;' />
+            <member value='&quot;CO2_Level&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+        <column caption='Heavy rainfall' datatype='string' name='[Calculation_1168402633111228416]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF [Rainfall] &gt; 50 THEN &quot;Yes&quot; ELSE &quot;No&quot; END' />
+        </column>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Calculation_1168402633111228416]' derivation='None' name='[none:Calculation_1168402633111228416:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='98222' id='5' type-v2='layout-basic' w='89000' x='500' y='889'>
+              <zone h='49110' id='3' name='Sheet 5' w='44497' x='500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49110' id='12' name='Sheet 6' w='44503' x='44997' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49112' id='13' name='Sheet 7' w='44497' x='500' y='49999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49112' id='15' name='Sheet 8' w='44503' x='44997' y='49999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98222' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='10000' x='89500' y='889'>
+              <zone h='45889' id='8' name='Sheet 5' param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type-v2='filter' w='10000' x='89500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8111' id='9' name='Sheet 5' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89500' y='46778'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10333' id='10' name='Sheet 5' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1209497979541524488:nk]' type-v2='color' w='10000' x='89500' y='54889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6222' id='11' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89500' y='65222'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8000' id='14' name='Sheet 7' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type-v2='color' w='10000' x='89500' y='71444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='11667' id='16' name='Sheet 8' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' type-v2='filter' w='10000' x='89500' y='79444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8000' id='17' name='Sheet 8' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' type-v2='color' w='10000' x='89500' y='91111'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='20' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone h='45889' id='8' mode='checkdropdown' name='Sheet 5' param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type-v2='filter' w='10000' x='89500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8111' id='9' name='Sheet 5' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89500' y='46778'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49110' id='3' is-fixed='true' name='Sheet 5' w='44497' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10333' id='10' name='Sheet 5' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1209497979541524488:nk]' type-v2='color' w='10000' x='89500' y='54889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49110' id='12' is-fixed='true' name='Sheet 6' w='44503' x='44997' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49112' id='13' is-fixed='true' name='Sheet 7' w='44497' x='500' y='49999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8000' id='14' name='Sheet 7' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type-v2='color' w='10000' x='89500' y='71444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11667' id='16' mode='checkdropdown' name='Sheet 8' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' type-v2='filter' w='10000' x='89500' y='79444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49112' id='15' is-fixed='true' name='Sheet 8' w='44503' x='44997' y='49999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8000' id='17' name='Sheet 8' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' type-v2='color' w='10000' x='89500' y='91111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6222' id='11' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89500' y='65222'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{26D58BC3-B4D8-43B1-A53A-4DA1794E2FFF}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Sheet1 (karachi_weather_10000_days_cleaned)' name='federated.16dryja0hryadq10ub7s21kd2ase' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Temperature&quot;'>
+          <calculation class='tableau' formula='&quot;Temperature&quot;' />
+          <members>
+            <member value='&quot;Temperature&quot;' />
+            <member value='&quot;Humidity&quot;' />
+            <member value='&quot;Rainfall&quot;' />
+            <member value='&quot;CO2_Level&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.16dryja0hryadq10ub7s21kd2ase'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Date]' derivation='MY' name='[my:Date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='98222' id='5' type-v2='layout-basic' w='89000' x='500' y='889'>
+              <zone h='49110' id='3' name='Sheet 9' w='44497' x='500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49110' id='10' name='Sheet 10' w='44503' x='44997' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49112' id='12' name='Sheet 11' w='44497' x='500' y='49999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49112' id='14' name='Sheet 12' w='44503' x='44997' y='49999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98222' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='10000' x='89500' y='889'>
+              <zone h='52889' id='8' name='Sheet 9' param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type-v2='filter' w='10000' x='89500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8111' id='9' name='Sheet 9' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89500' y='53778'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10333' id='11' name='Sheet 10' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633127546881:nk]' type-v2='color' w='10000' x='89500' y='61889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8000' id='13' name='Sheet 11' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type-v2='color' w='10000' x='89500' y='72222'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12667' id='15' name='Sheet 12' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[__tableau_internal_object_id__].[fVal:cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' type-v2='size' w='10000' x='89500' y='80222'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6222' id='16' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89500' y='92889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='19' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone h='59889' id='8' mode='checkdropdown' name='Sheet 9' param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type-v2='filter' w='10000' x='89500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8111' id='9' name='Sheet 9' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89500' y='60778'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49110' id='3' is-fixed='true' name='Sheet 9' w='44497' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49110' id='10' is-fixed='true' name='Sheet 10' w='44503' x='44997' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10333' id='11' name='Sheet 10' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633127546881:nk]' type-v2='color' w='10000' x='89500' y='68889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49112' id='12' is-fixed='true' name='Sheet 11' w='44497' x='500' y='49999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5667' id='13' name='Sheet 11' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type-v2='color' w='10000' x='89500' y='79222'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49112' id='14' is-fixed='true' name='Sheet 12' w='44503' x='44997' y='49999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8000' id='15' name='Sheet 12' pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[__tableau_internal_object_id__].[fVal:cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' type-v2='size' w='10000' x='89500' y='84889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6222' id='16' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89500' y='92889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7977F2DE-E483-4BD6-92E6-BAD9882CACF2}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{921A2C8C-889F-4C03-9EE6-307A8529D18A}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[avg:Rainfall:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2BE2A783-C80F-47B7-8561-D402FDCC6FAD}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6D7F0315-C907-4B23-A86A-49867329E402}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[usr:Calculation_1209497979541098503:nk]' type='color' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EEBB80CF-FA41-4D03-8894-4A3541CC8AC7}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2' />
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='13' />
+      <device-preview visible='true' />
+      <simple-id uuid='{8E31F625-3865-4ABA-9D25-C32944E9304E}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1209497979541524488:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{88C6DB3C-9BAB-4330-8C44-54CB5144D568}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A6C4176B-453C-4EAD-BF8F-5C541AC30E45}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{F9100D07-6136-4FC4-8284-5500FBA24706}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633111228416:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E02178B8-A9B9-450D-803E-4158369987B5}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 8'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{97E4386F-1D40-46FD-90BD-7C85E058DCB2}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[my:Date:ok]' type='filter' />
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7D37AF67-6BB8-42CB-B31D-51A03E6D415A}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Calculation_1168402633127546881:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CE951C45-17EF-4103-B7E7-910EEA00669A}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BDCF8DAA-88E6-4CC0-AC4B-6EDA6F296442}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[__tableau_internal_object_id__].[fVal:cnt:Sheet1_CCF187F95C4A48858D3764ACD2E6A86E:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.16dryja0hryadq10ub7s21kd2ase].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A9CEE3DC-435C-4446-B23A-9026BA07D670}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Sheet 10'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 11' />
+        <viewpoint name='Sheet 12'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 9'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{BF2D6EC8-09E4-419C-B3B6-683C0CD3C290}' />
+    </window>
+  </windows>
+</workbook>
